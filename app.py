@@ -21,6 +21,14 @@ auth = firebase.auth()
 db = firebase.database()
 
 @app.route('/', methods=['GET', 'POST'])
+def home_page():
+	return render_template("home.html")
+
+@app.route('/add-comment', methods=['GET', 'POST'])
+def add_comment():
+	return redirect(url_for('signin'))
+
+@app.route('/sigin', methods=['GET', 'POST'])
 def signin():
     error = ""
     if request.method == 'POST':
@@ -44,15 +52,11 @@ def signup():
             login_session['user'] = auth.create_user_with_email_and_password(email, password)
             user = {"full_name":request.form['full_name'], "password":request.form['password'], "username": request.form['username'], "bio":request.form['bio']}
             db.child("Users").child(login_session['user']['localId']).set(user)
-            return redirect(url_for('home_page'))
+            return render_template("comments.html")
         except:
         	error = "Authentication failed"
 
     return render_template("signup.html")
-
-@app.route('/home', methods=['GET', 'POST'])
-def home_page():
-	return render_template("home.html")
 
 if __name__ == '__main__':
     app.run(debug=True)

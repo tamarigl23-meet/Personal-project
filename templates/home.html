@@ -4,22 +4,37 @@
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 	<!--top navigation bar: hotels, restaurants, places to visit, history of DC-->
 	<div class="topnav">
-		<a class="active" href="#home">Home</a>
-		<a href="#news">Places to visit</a>
-		<a href="#contact">Resaurants</a>
-		<a href="#about">Hotels</a>
-		<a href="#add_comments">Add comments</a>
+		<a href="/">Home</a>
+		<a href="/places-to-visit">Places to visit</a>
+		<a href="/restaurants">Resaurants</a>
+		<a href="/hotels">Hotels</a>
+		<a href="/add-comment">Add comments</a>
 	</div>
 </head>
 
 <body>
-	<h1>Washington DC</h1>
-	<p>Washington, D.C. is the capital city and federal district of the United States. It is located on the east bank of the Potomac River. The city was named for George Washington, a Founding Father and the first president of the United States. As the seat of the U.S. federal government and several international organizations, the city is an important world political capital. It is one of the most visited cities in the U.S., seeing over 20 million visitors in 2016!</p>
-	<h3>The weather in DC</h3>
-	<p>Summers are hot and humid with a July daily average of 79.8 °F (26.6 °C) and average daily relative humidity around 66%.
-	Winters are cold and sometimes it even snows.</p>
-	<p>** July is the hottest month in Washington, the hottest hour is 6:00 pm! </p>
-	<h3>Transportation in DC</h3>
-	<p>Washington DC public transportation is great. The Meto is an affordable and convenient way to get around the DC metropolitan area.</p>
+	<article>
+		<h1>Washington DC</h1>
+	</article>
+	<article class="about_css">
+		<p>Washington, D.C. is the capital city and federal district of the United States.
+		 It is located on the east bank of the Potomac River. The city was named for George Washington, a Founding Father and the first president of the United States. As the seat of the U.S. federal government and several international organizations, the city is an important world political capital. It is one of the most visited cities in the U.S., seeing over 20 million visitors in 2016!
+		 Washington has incredible museums and monuments, the streets are very clean, which is always a plus...</p>
+	</article>
+	<article class="weather_css">
+		<h3>The weather in DC</h3>
+		<p>Summers are hot and humid with a July daily average of 79.8 °F (26.6 °C) and average daily relative humidity around 66%.
+		Winters are cold and sometimes it even snows.</p>
+		<p>** July is the hottest month in Washington, the hottest hour is 6:00 pm! </p>
+	</article>
+	<article class="tra_css">
+		<h3>Transportation in DC</h3>
+		<p>Washington DC public transportation is great. The Meto is an affordable and convenient way to get around the DC metropolitan area.</p>
+	</article>
+	<article class="buildings_css">
+		<h3>Architecture in DC</h3>
+		<p>The definitive architectural style in DC, and especially in the "Mall" is neoclassical, inspired by the use of ancient Greek and Roman designs of great public buildings.
+		Did you know? The height of a building in DC is permitted to be max 90 ft so it won't be higher than the Washington Monument!</p>
+	</article>
 </body>
 </html>

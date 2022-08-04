@@ -14,11 +14,12 @@
 </head>
 
 <body>
-<form action="/add-comment" method="POST" class="comments_bigger">
-    <input type="text" name="title" placeholder="Title">
-    <input type="text" name="text" placeholder="Text" maxlength="280">
-    <input type="submit" value="Submit">
-</form>
-
+	<article class="comments_css_head">
+		<h1>Comments</h1>
+	</article>
+	{% for i in comments %}
+<!-- 	<h2> {{comments[i]['Title']}} </h2>-->	
+	<h2> {{comments[i]['Text']}} </h2>
+	{% endfor %}
 </body>
 </html>
